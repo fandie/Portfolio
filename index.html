@@ -29,17 +29,21 @@
       </label>
 
       <nav class="navbar">
-        <a href="index.html" class="active">Home</a>
-        <a href="#about">About Me</a>
+        <a href="#home" class="active">Home</a>
+        <a href="#skill">Skill</a>
+        <a href="#experience">Experience Me</a>
         <a href="#project">My Project</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <section class="home">
+
+<!-- Section Home -->
+<main>
+    <section id=home class="home">
       <div class="home-content">
         <h1>Hi, Saya Fandi Prasetyo</h1>
-        <h3 id="job-title">Junior Web Frontend Developer</h3>
+        <span class="multiple-text"></span>
         <p>Selamat datang di website saya, Saya senang sekali berbagi kisah dan pencapaian proyek-proyek kreatif saya. Temukan lebih banyak informasi tentang saya <a href="#about">disini</a></p>
         <a href="https://drive.google.com/file/d/1DLgXQ-FAG5C2oVZ5ijWKIQNxtHfSfSzQ/view?usp=sharing" class="btn" target="_blank">Download CV</a>
         <div class="socmed">
@@ -47,58 +51,22 @@
           <a href="#"><i class='bx bxl-github'></i></a>
           <a href="#"><i class='bx bxl-telegram' ></i></a>
         </div>
-        
-      </div>
-
-      <div class="profile-img">
-        <div class="profile-circle">
-          <img src="assets/image/index/CripingMask.png" alt="">
-        </div>
-      </div>
     </section>
+    <aside>
+      <img class="image" src="assets/image/index/astronaut_riding_rocket.png" alt="astronout">
+    </aside>
+  </main>
 
-    <section class="about" id="about">
 
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Hi, Saya siap membantu dalam project anda berikutnya</h3>
-        <p>Saya merupakan seorang Junior Web Developer, Junior Data Science dan juga seorang Social Media Specialist. Saya percaya bahwa setiap baris kode memiliki cerita, dan saya berkomitmen untuk menciptakan pengalaman pengguna yang menarik dan responsif. Selain itu saya juga memiliki analisa yang.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-    </section>
-
-    <div class="Work-content">
-      <h2 class="Work">Work Experience</h2>
-      <h3></h3>
-    </div>
+<!-- Section About Me -->
 
     <footer class="footer">
       <p>&copy; by Fandi Prasetyo 2023.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="index.js"></script>
-
-    <script>
-      const aboutSection = document.querySelector('.about');
-
-function handleIntersection(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      entry.target.classList.remove('hide'); // Hapus kelas hide saat elemen masuk
-      observer.unobserve(entry.target);
-    } else {
-      entry.target.classList.remove('show'); // Hapus kelas show saat elemen keluar
-      entry.target.classList.add('hide'); // Tambahkan kelas hide untuk efek fade-out
-    }
-  });
-}
-
-const aboutObserver = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
-
-aboutObserver.observe(aboutSection);
-    </script>
 
   </body>
 </html>
