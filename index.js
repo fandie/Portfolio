@@ -1,11 +1,10 @@
-const jobTitles = ['Junior Web Frontend Developer', 'Junior Data Science', 'Social Media Specialist'];
-let currentIndex = 0;
-
-function changeJobTitle() {
-    const jobTitleElement = document.getElementById('job-title');
-    jobTitleElement.textContent = jobTitles[currentIndex];
-    currentIndex = (currentIndex + 1) % jobTitles.length;
-}
+var typed = new Typed(".multiple-text", {
+  strings: ["Frontend Developer", "Data Scientist", "Social Media Specialist"],
+  typeSpeed: 70,
+  backSpeed: 30,
+  backDelay: 500,
+  loop: true,
+});
 
 setInterval(changeJobTitle, 2000); // Mengubah interval ke 4 detik
 
