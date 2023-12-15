@@ -255,6 +255,7 @@ main {
   border-radius: 10px;
   opacity: 0;
   animation: zoomin 1s ease forwards, floatImage 4s ease-in-out infinite;
+  filter: drop-shadow(10px 0px 10px yellowgreen);
 }
 
 .land {
@@ -301,6 +302,7 @@ span {
   width: 60%;
   border-radius: 50%;
   border: 3.2px solid yellowgreen;
+  box-shadow: 0 0 20px #fff;
 }
 
 .about-content {
@@ -315,10 +317,67 @@ span {
   margin-right: 2%;
 }
 
+.nav-container {
+  width: 100%;
+}
+
+.nav-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+  letter-spacing: 1.6px;
+  max-width: 140px;
+  font-size: 20px;
+  box-shadow: 0 0 10px yellowgreen;
+}
+
+.nav-link:hover {
+  background-color: yellowgreen;
+  box-shadow: 0 0 10px #fff;
+  color: #fff;
+}
+
+.nav-link.active {
+  background-color: yellowgreen;
+  border-bottom: 1px solid yellowgreen;
+  color: #fff;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-pane {
+  display: none;
+  color: #fff;
+}
+
+.tab-pane.active {
+  display: block;
+  color: #fff;
+}
+
+/*
 .btn-box.btns .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #fff; /* Green color, you can customize */
+  background-color: #fff;
   color: #000000;
   text-decoration: none;
   border-radius: 5px;
@@ -329,10 +388,10 @@ span {
   background-color: yellowgreen;
 }
 
-/* Button Box Style */
 .btn-box {
   margin-top: 20px;
 }
+*/
 
 .footer {
   position: relative;;
@@ -438,7 +497,6 @@ span {
     width: 200%;
     height: 200%;
   }
-
 }
 
 @keyframes slideTop {
