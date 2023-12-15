@@ -72,10 +72,27 @@
       <div class="about-content">
         <p>Saya adalah seorang web programmer, ilmuwan data, dan social media enthusiast. Dengan kecintaan terhadap teknologi, saya berkomitmen untuk terus belajar dan berkembang sehingga saya bisa menghasilkan karya dan inovasi bukan hanya untuk saya pribadi, namun juga untuk orang lain.</p>
         <p>Dengan latar belakang saya, saya yakin dapat mengembangkan solusi kreatif serta efisien untuk tantangan teknis. Sebagai seorang ilmuwan data, saya mengeksplorasi dan menganalisis data untuk mendapatkan wawasan yang bernilai. Dan sebagai seorang penggemar media sosial, saya selalu bersemangat untuk terhubung dan berbagi pengetahuan yang saya miliki.</p>  
-        <div class="btn-box btns">
-            <a href="#" class="btn">Read More</a>
+        
+        <div class="nav-container">
+          <ul class="nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <!-- Perubahan: Menambahkan class 'tab-button' -->
+              <button class="nav-link active tab-button" id="skill-tab" onclick="showTab('skill-tab-pane')" role="tab" aria-controls="skill-tab-pane" aria-selected="true">My Skill</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link tab-button" id="education-tab" onclick="showTab('education-tab-pane')" role="tab" aria-controls="education-tab-pane" aria-selected="false">Education</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link tab-button" id="experience-tab" onclick="showTab('experience-tab-pane')" role="tab" aria-controls="experience-tab-pane" aria-selected="false">Experience</button>
+            </li>
+          </ul>
+      
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane active" id="skill-tab-pane">Skill content goes here...</div>
+            <div class="tab-pane" id="education-tab-pane">Education content goes here...</div>
+            <div class="tab-pane" id="experience-tab-pane">Experience content goes here...</div>
           </div>
-      </div>
+        </div>
     </section>
 
     <!-- Section Project -->
