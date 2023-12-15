@@ -317,59 +317,36 @@ span {
   margin-right: 2%;
 }
 
-.nav-container {
+.accordion-item {
+  border: 2px solid #ddd;
+  margin-bottom: 5px;
   width: 100%;
 }
 
-.nav-tabs {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  border-bottom: 1px solid #ccc;
-}
-
-.nav-item {
-  margin-right: 10px;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-weight: 600;
+.accordion-button {
+  width: 100%;
+  text-align: left;
   padding: 10px;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 15px 15px 0 0;
-  cursor: pointer;
-  letter-spacing: 1.6px;
-  max-width: 140px;
+  border: none;
+  outline: none;
+  background-color: #f8f9fa;
+  position: relative;
   font-size: 20px;
-  box-shadow: 0 0 10px yellowgreen;
 }
 
-.nav-link:hover {
-  background-color: yellowgreen;
-  box-shadow: 0 0 10px #fff;
-  color: #fff;
-}
-
-.nav-link.active {
-  background-color: yellowgreen;
-  border-bottom: 1px solid yellowgreen;
-  color: #fff;
-}
-
-.tab-content {
-  margin-top: 20px;
-}
-
-.tab-pane {
-  display: none;
-  color: #fff;
-}
-
-.tab-pane.active {
+.accordion-button .bx {
+  float: right;
   display: block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+h3 {
+  margin-left: 25px;
+  display: inline;
+}
+
+.accordion-content {
   color: #fff;
 }
 
