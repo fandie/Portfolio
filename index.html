@@ -73,27 +73,42 @@
         <p>Saya adalah seorang web programmer, ilmuwan data, dan social media enthusiast. Dengan kecintaan terhadap teknologi, saya berkomitmen untuk terus belajar dan berkembang sehingga saya bisa menghasilkan karya dan inovasi bukan hanya untuk saya pribadi, namun juga untuk orang lain.</p>
         <p>Dengan latar belakang saya, saya yakin dapat mengembangkan solusi kreatif serta efisien untuk tantangan teknis. Sebagai seorang ilmuwan data, saya mengeksplorasi dan menganalisis data untuk mendapatkan wawasan yang bernilai. Dan sebagai seorang penggemar media sosial, saya selalu bersemangat untuk terhubung dan berbagi pengetahuan yang saya miliki.</p>  
         
-        <div class="nav-container">
-          <ul class="nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <!-- Perubahan: Menambahkan class 'tab-button' -->
-              <button class="nav-link active tab-button" id="skill-tab" onclick="showTab('skill-tab-pane')" role="tab" aria-controls="skill-tab-pane" aria-selected="true">My Skill</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link tab-button" id="education-tab" onclick="showTab('education-tab-pane')" role="tab" aria-controls="education-tab-pane" aria-selected="false">Education</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link tab-button" id="experience-tab" onclick="showTab('experience-tab-pane')" role="tab" aria-controls="experience-tab-pane" aria-selected="false">Experience</button>
-            </li>
-          </ul>
-      
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane active" id="skill-tab-pane">Skill content goes here...</div>
-            <div class="tab-pane" id="education-tab-pane">Education content goes here...</div>
-            <div class="tab-pane" id="experience-tab-pane">Experience content goes here...</div>
+        <div class="accordion" id="accordionExample">
+
+          <!-- Skill Tab -->
+          <div class="accordion-item">
+            <button class="accordion-button" id="skill-tab">
+              <i class='bx bxs-plus-square' onclick="toggleAccordion('collapseSkill')"></i>
+              <h3>My Skill</h3>
+            </button>
+            <div class="accordion-content" id="collapseSkill">
+              Skill content goes here...
+            </div>
           </div>
+        
+          <!-- Education Tab -->
+          <div class="accordion-item">
+            <button class="accordion-button" id="education-tab">
+              <i class='bx bxs-plus-square' onclick="toggleAccordion('collapseEducation')"></i>
+              <h3>Education</h3>
+            </button>
+            <div class="accordion-content" id="collapseEducation">
+              Education content goes here...
+            </div>
+          </div>
+        
+          <!-- Experience Tab -->
+          <div class="accordion-item">
+            <button class="accordion-button" id="experience-tab">
+              <i class='bx bxs-plus-square' onclick="toggleAccordion('collapseExperience')"></i>
+              <h3>Experience</h3>
+            </button>
+            <div class="accordion-content" id="collapseExperience">
+              Experience content goes here...
+            </div>
+          </div>
+        
         </div>
-    </section>
 
     <!-- Section Project -->
     <section>
