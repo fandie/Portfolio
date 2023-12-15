@@ -6,34 +6,24 @@ var typed = new Typed(".multiple-text", {
   loop: true,
 });
 
- // Perubahan: Menambahkan fungsi untuk menangani perubahan warna pada tab
- function updateTabColors(activeTabButton) {
-  // Mengambil semua tab button
-  var tabButtons = document.querySelectorAll('.tab-button');
-  // Menghapus class 'active' dari semua tab button
-  tabButtons.forEach(function (button) {
-    button.classList.remove('active');
-  });
-  // Menambah class 'active' pada tab button yang sedang aktif
-  activeTabButton.classList.add('active');
-}
-
-// Perubahan: Menyederhanakan fungsi showTab
-function showTab(tabId) {
-  // Mengambil semua tab pane
-  var tabs = document.querySelectorAll('.tab-pane');
-  // Menghapus class 'active' dari semua tab pane
-  tabs.forEach(function (tab) {
-    tab.classList.remove('active');
+document.addEventListener("DOMContentLoaded", function () {
+  // Semua konten diatur awalnya menjadi nonaktif
+  var contents = document.querySelectorAll('.accordion-content');
+  contents.forEach(function (content) {
+    content.style.display = 'none';
   });
 
-  // Mengambil elemen tab pane yang sedang aktif
-  var selectedTab = document.getElementById(tabId);
-  // Menambah class 'active' pada tab pane yang sedang aktif
-  if (selectedTab) {
-    selectedTab.classList.add('active');
-  }
+  // Ganti ikon bx menjadi minus di awal
+  var icons = document.querySelectorAll('.bx bxs-plus-square');
+  icons.forEach(function (icon) {
+    icon.className = 'bx bxs-plus-square';
+  });
+});
 
-  // Memanggil fungsi updateTabColors dengan tab button yang sedang aktif
-  updateTabColors(document.getElementById(tabId.replace('-pane', '')));
+function toggleAccordion(contentId) {
+  var content = document.getElementById(contentId);
+  content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+
+  var icon = content.previousElementSibling.querySelector('.bx bxs-plus-square');
+  icon.className = (content.style.display === 'block') ? 'bx bxs-minus-square' : 'bx bxs-plus-square';
 }
