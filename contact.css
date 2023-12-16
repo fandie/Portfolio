@@ -12,10 +12,22 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  background : url(assets/image/index/Indexbg.jpg);
+  background : #000;
   background-size: cover;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
+
+aside {
+    width: 10%; /* Atur lebar aside sesuai kebutuhan */
+    display: flex;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
 
 
 .contact {
@@ -27,8 +39,10 @@ body {
 }
 
 .contact form {
-    width: 600px;
-    text-align: center;
+  width: 100%; /* Mengisi lebar formulir pada layar kecil */
+  max-width: 600px; /* Batasi lebar formulir agar tidak terlalu lebar pada layar besar */
+  text-align: center;
+  margin: auto;
 }
 
 form .input-box {
@@ -125,16 +139,33 @@ form button:hover {
 }
 
 
+/*Footer Section*/
+.footer {
+    background-image: url('path/to/your/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Membuat latar belakang tetap */
+    height: 400px; /* Sesuaikan dengan tinggi footer Anda */
+  }
+  
+  
+  .footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 @media (max-width: 992px) {
     form .input-box {
-      flex-direction: column; /* Mengubah orientasi ke kolom pada layar kecil */
+      flex-direction:column;
     }
   }
   
   /* Media query untuk layar berukuran sangat kecil (maksimum 768px) */
   @media (max-width: 768px) {
     form {
-      width: 90%; /* Mengurangi lebar formulir */
-      margin: auto; /* Pusatkan formulir pada layar kecil */
+      width: 100%;
+      margin: auto;
     }
+    
   }
