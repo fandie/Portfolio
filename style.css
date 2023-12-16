@@ -612,11 +612,11 @@ h4 {
   color: #fff;
   font-weight: 500;
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 15px;
 }
 
 .layer a {
-  margin-top: 20px;
+  margin-top: 0px;
   color: #000000;
   text-decoration: none;
   font-size: 18px;
@@ -730,10 +730,11 @@ h4 {
   }
 
   .land {
+    display: flex;
     position:relative;
     width: 100%;
     margin-top: 80%;
-    margin-bottom: -10%;
+    margin-bottom: -20%;
   }
 
   .About {
